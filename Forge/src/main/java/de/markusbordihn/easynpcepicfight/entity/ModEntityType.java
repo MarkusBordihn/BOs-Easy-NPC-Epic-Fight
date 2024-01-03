@@ -38,7 +38,7 @@ import net.minecraftforge.registries.RegistryObject;
 @EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEntityType {
   public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-      DeferredRegister.create(ForgeRegistries.ENTITIES, Constants.MOD_ID);
+      DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Constants.MOD_ID);
 
   public static final RegistryObject<EntityType<HuskEpicFight>> HUSK =
       ENTITY_TYPES.register(

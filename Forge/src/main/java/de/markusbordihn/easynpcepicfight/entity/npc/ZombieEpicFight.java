@@ -26,7 +26,7 @@ import net.minecraft.world.level.Level;
 
 public class ZombieEpicFight extends Zombie {
 
-  public static final String ID = "zombie";
+  public static final String ID = Zombie.ID;
 
   public ZombieEpicFight(EntityType<? extends EasyNPCEntity> entityType, Level level) {
     super(entityType, level, Variant.ZOMBIE);

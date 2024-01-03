@@ -26,7 +26,7 @@ import net.minecraft.world.level.Level;
 
 public class HuskEpicFight extends Zombie {
 
-  public static final String ID = "husk";
+  public static final String ID = Zombie.ID_HUSK;
 
   public HuskEpicFight(EntityType<? extends EasyNPCEntity> entityType, Level level) {
     super(entityType, level, Variant.HUSK);

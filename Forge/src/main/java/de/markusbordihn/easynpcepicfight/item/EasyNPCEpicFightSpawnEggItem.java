@@ -26,7 +26,6 @@ import java.util.function.Supplier;
 import javax.annotation.Nullable;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.Item;
@@ -45,9 +44,9 @@ public class EasyNPCEpicFightSpawnEggItem extends EasyNPCSpawnEggItem {
   public void appendHoverText(
       ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
     super.appendHoverText(itemStack, level, list, flag);
-    list.add(new TranslatableComponent(Constants.TEXT_ITEM_PREFIX + "spawn_egg.tooltip"));
+    list.add(Component.translatable(Constants.TEXT_ITEM_PREFIX + "spawn_egg.tooltip"));
     list.add(
-        new TranslatableComponent(Constants.TEXT_ITEM_PREFIX + "spawn_egg.tooltip_note")
+        Component.translatable(Constants.TEXT_ITEM_PREFIX + "spawn_egg.tooltip_note")
             .withStyle(ChatFormatting.RED));
   }
 }

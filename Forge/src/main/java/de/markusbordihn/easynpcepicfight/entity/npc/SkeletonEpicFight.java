@@ -26,7 +26,7 @@ import net.minecraft.world.level.Level;
 
 public class SkeletonEpicFight extends Skeleton {
 
-  public static final String ID = "skeleton";
+  public static final String ID = Skeleton.ID;
 
   public SkeletonEpicFight(EntityType<? extends EasyNPCEntity> entityType, Level level) {
     super(entityType, level, Variant.SKELETON);
