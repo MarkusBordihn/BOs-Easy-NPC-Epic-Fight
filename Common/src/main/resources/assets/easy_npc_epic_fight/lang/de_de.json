@@ -1,0 +1,13 @@
+{
+  "entity.easy_npc_epic_fight.husk": "Husk",
+  "entity.easy_npc_epic_fight.skeleton": "Skelett",
+  "entity.easy_npc_epic_fight.wither_skeleton": "Wither Skelett",
+  "entity.easy_npc_epic_fight.zombie": "Zombie",
+  "item.easy_npc_epic_fight.husk_spawn_egg": "Husk NPC Spawn-Ei (Epic Fight)",
+  "item.easy_npc_epic_fight.skeleton_spawn_egg": "Skelett NPC Spawn-Ei (Epic Fight)",
+  "item.easy_npc_epic_fight.wither_skeleton_spawn_egg": "Wither Skelett NPC Spawn-Ei (Epic Fight)",
+  "item.easy_npc_epic_fight.zombie_spawn_egg": "Zombie NPC Spawn-Ei (Epic Fight)",
+  "itemGroup.easy_npc_epic_fight.spawn_eggs": "EasyNPC (Epic Fight) - Spawn-Eier",
+  "text.easy_npc_epic_fight.item.spawn_egg.tooltip": "EasyNPC Spawn-Ei mit Epic Fight Integration",
+  "text.easy_npc_epic_fight.item.spawn_egg.tooltip_note": "Hinweis: Die EasyNPC-Konfiguration ist begrenzt!"
+}

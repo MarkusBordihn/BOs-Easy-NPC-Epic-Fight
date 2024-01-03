@@ -1,0 +1,56 @@
+# This is an example mods.toml file. It contains the data relating to the loading mods.
+# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
+# The overall format is standard TOML format, v0.5.0.
+# Note that there are a couple of TOML lists in this file.
+# Find more information on toml format here:  https://github.com/toml-lang/toml
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader = "javafml" #mandatory
+
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion = "[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license = "MIT"
+
+# A URL to refer people to when problems occur with this mod
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]] #mandatory
+modId = "easy_npc_epic_fight"
+version = "${file.jarVersion}"
+displayName = "Bo's Easy NPC: Epic Fight"
+displayURL="https://legacy.curseforge.com/minecraft/mc-mods/easy-npc-epic-fight"
+logoFile = "logo.png"
+credits = ""
+authors = "Markus Bordihn"
+description = '''Easy NPC: Epic Fight Integration.'''
+
+[[dependencies.easy_npc_epic_fight]]
+modId = "forge"
+mandatory = true
+versionRange = "[40,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.easy_npc_epic_fight]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,1.19)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.easy_npc_epic_fight]]
+modId = "easy_npc"
+mandatory = true
+versionRange = "[3.7.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.easy_npc_epic_fight]]
+modId = "epicfight"
+mandatory = true
+versionRange = "[18.5.19,)"
+ordering = "NONE"
+side = "BOTH"
