@@ -1,6 +1,11 @@
-MIT License
+# License
 
-Copyright (c) 2024 Markus Bordihn
+**The license applies only to the code in this repository. Images, models and other assets are
+explicitly excluded.**
+
+## MIT License
+
+Copyright (c) 2023 Markus Bordihn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
