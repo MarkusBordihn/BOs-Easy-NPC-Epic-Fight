@@ -25,7 +25,6 @@ import de.markusbordihn.easynpcepicfight.entity.ModEntityType;
 import de.markusbordihn.easynpcepicfight.entity.npc.HuskEpicFight;
 import de.markusbordihn.easynpcepicfight.entity.npc.SkeletonEpicFight;
 import de.markusbordihn.easynpcepicfight.entity.npc.WitherSkeletonEpicFight;
-import de.markusbordihn.easynpcepicfight.tabs.EasyNPCEpicFightTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
@@ -43,39 +42,27 @@ public class ModItems {
           HuskEpicFight.ID + SPAWN_EGG_PREFIX,
           () ->
               new EasyNPCEpicFightSpawnEggItem(
-                  ModEntityType.HUSK,
-                  new Item.Properties()
-                      .rarity(Rarity.EPIC)
-                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
+                  ModEntityType.HUSK, new Item.Properties().rarity(Rarity.EPIC)));
 
   public static final RegistryObject<Item> SKELETON_NPC_SPAWN_EGG =
       ITEMS.register(
           SkeletonEpicFight.ID + SPAWN_EGG_PREFIX,
           () ->
               new EasyNPCEpicFightSpawnEggItem(
-                  ModEntityType.SKELETON,
-                  new Item.Properties()
-                      .rarity(Rarity.EPIC)
-                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
+                  ModEntityType.SKELETON, new Item.Properties().rarity(Rarity.EPIC)));
 
   public static final RegistryObject<Item> WITHER_SKELETON_NPC_SPAWN_EGG =
       ITEMS.register(
           WitherSkeletonEpicFight.ID + SPAWN_EGG_PREFIX,
           () ->
               new EasyNPCEpicFightSpawnEggItem(
-                  ModEntityType.WITHER_SKELETON,
-                  new Item.Properties()
-                      .rarity(Rarity.EPIC)
-                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
+                  ModEntityType.WITHER_SKELETON, new Item.Properties().rarity(Rarity.EPIC)));
   public static final RegistryObject<Item> ZOMBIE_NPC_SPAWN_EGG =
       ITEMS.register(
           Zombie.ID + SPAWN_EGG_PREFIX,
           () ->
               new EasyNPCEpicFightSpawnEggItem(
-                  ModEntityType.ZOMBIE,
-                  new Item.Properties()
-                      .rarity(Rarity.EPIC)
-                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
+                  ModEntityType.ZOMBIE, new Item.Properties().rarity(Rarity.EPIC)));
 
   protected ModItems() {}
 }

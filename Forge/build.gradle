@@ -197,6 +197,7 @@ curseforge {
     releaseType = "${project.curseforge_release_type}"
     addGameVersion("${project.minecraft_version}")
     addGameVersion("Forge")
+    addGameVersion("NeoForge")
     mainArtifact(jar) {
       relations {
         requiredDependency 'easy-npc'

@@ -19,28 +19,20 @@
 
 package de.markusbordihn.easynpcepicfight.tabs;
 
-import de.markusbordihn.easynpcepicfight.Constants;
 import de.markusbordihn.easynpcepicfight.item.ModItems;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.item.CreativeModeTab.DisplayItemsGenerator;
+import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters;
+import net.minecraft.world.item.CreativeModeTab.Output;
 
-public class EasyNPCEpicFightTab {
+public class SpawnEggs implements DisplayItemsGenerator {
 
-  public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
-      DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Constants.MOD_ID);
+  protected SpawnEggs() {}
 
-  public static final RegistryObject<CreativeModeTab> TAB_SPAWN_EGGS =
-      CREATIVE_TABS.register(
-          "spawn_eggs",
-          () ->
-              CreativeModeTab.builder()
-                  .icon(() -> ModItems.ZOMBIE_NPC_SPAWN_EGG.get().getDefaultInstance())
-                  .displayItems(new SpawnEggs())
-                  .title(Component.translatable("itemGroup.easy_npc_epic_fight.spawn_eggs"))
-                  .build());
-
-  protected EasyNPCEpicFightTab() {}
+  @Override
+  public void accept(ItemDisplayParameters itemDisplayParameters, Output output) {
+    output.accept(ModItems.HUSK_NPC_SPAWN_EGG.get());
+    output.accept(ModItems.SKELETON_NPC_SPAWN_EGG.get());
+    output.accept(ModItems.WITHER_SKELETON_NPC_SPAWN_EGG.get());
+    output.accept(ModItems.ZOMBIE_NPC_SPAWN_EGG.get());
+  }
 }

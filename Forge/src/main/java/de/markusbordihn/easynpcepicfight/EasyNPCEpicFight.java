@@ -22,6 +22,7 @@ package de.markusbordihn.easynpcepicfight;
 import de.markusbordihn.easynpcepicfight.client.renderer.ClientRenderer;
 import de.markusbordihn.easynpcepicfight.entity.ModEntityType;
 import de.markusbordihn.easynpcepicfight.item.ModItems;
+import de.markusbordihn.easynpcepicfight.tabs.EasyNPCEpicFightTab;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -54,6 +55,7 @@ public class EasyNPCEpicFight {
               log.info(
                   "{} Client events ...", de.markusbordihn.easynpc.Constants.LOG_REGISTER_PREFIX);
               modEventBus.addListener(ClientRenderer::registerEntityRenderers);
+              EasyNPCEpicFightTab.CREATIVE_TABS.register(modEventBus);
             });
   }
 }
