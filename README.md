@@ -35,7 +35,7 @@ Most of the other configuration options are supported and can be used with the E
 
 ## Requirements
 
-- [Easy NPC Mod][easy_npc] version 3.7.2 or higher
+- [Easy NPC Mod][easy_npc] version 3.7.2 and higher but not version 4.x
 - [Epic Fight Mod][epic_fight] version 20.6.3 or higher
 
 ## Documentation
