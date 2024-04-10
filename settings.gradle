@@ -21,4 +21,4 @@ pluginManagement {
 }
 
 rootProject.name = 'Easy NPC - Epic Fight'
-include("Common", "Forge")
+include("Forge")

@@ -17,20 +17,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package de.markusbordihn.easynpcepicfight.tabs;
+package de.markusbordihn.easynpcepicfight.entity.npc;
 
-import de.markusbordihn.easynpcepicfight.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+import de.markusbordihn.easynpc.entity.easynpc.npc.IronGolem;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.level.Level;
 
-public class EasyNPCEpicFightTab {
+public class IronGolemEF extends IronGolem {
 
-  public static final CreativeModeTab TAB_SPAWN_EGGS =
-      new CreativeModeTab("easy_npc_epic_fight.spawn_eggs") {
-        public ItemStack makeIcon() {
-          return new ItemStack(ModItems.ZOMBIE_NPC_SPAWN_EGG.get());
-        }
-      };
+  public IronGolemEF(EntityType<? extends PathfinderMob> entityType, Level level) {
+    super(entityType, level);
+  }
 
-  private EasyNPCEpicFightTab() {}
+  @Override
+  public boolean supportsPoseConfiguration() {
+    return false;
+  }
+
+  @Override
+  public boolean supportsScalingConfiguration() {
+    return false;
+  }
+
+  @Override
+  public boolean supportsSmartAnimations() {
+    return false;
+  }
 }

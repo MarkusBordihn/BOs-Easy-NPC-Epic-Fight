@@ -19,14 +19,26 @@
 
 package de.markusbordihn.easynpcepicfight.entity;
 
-import de.markusbordihn.easynpc.entity.EasyNPCEntity;
-import de.markusbordihn.easynpc.entity.npc.Zombie;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Humanoid;
+import de.markusbordihn.easynpc.entity.easynpc.npc.HumanoidSlim;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Illager;
+import de.markusbordihn.easynpc.entity.easynpc.npc.IronGolem;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Skeleton;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Zombie;
+import de.markusbordihn.easynpc.entity.easynpc.npc.ZombieVillager;
 import de.markusbordihn.easynpcepicfight.Constants;
-import de.markusbordihn.easynpcepicfight.entity.npc.HuskEpicFight;
-import de.markusbordihn.easynpcepicfight.entity.npc.SkeletonEpicFight;
-import de.markusbordihn.easynpcepicfight.entity.npc.WitherSkeletonEpicFight;
-import de.markusbordihn.easynpcepicfight.entity.npc.ZombieEpicFight;
+import de.markusbordihn.easynpcepicfight.entity.npc.HumanoidEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.HumanoidSlimEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.HuskEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.IllagerEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.IronGolemEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.SkeletonEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.WitherSkeletonEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.ZombieEF;
+import de.markusbordihn.easynpcepicfight.entity.npc.ZombieVillagerEF;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.monster.Evoker;
+import net.minecraft.world.entity.monster.Illusioner;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -40,48 +52,49 @@ public class ModEntityType {
   public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
       DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Constants.MOD_ID);
 
-  public static final RegistryObject<EntityType<HuskEpicFight>> HUSK =
-      ENTITY_TYPES.register(
-          HuskEpicFight.ID,
-          () ->
-              EntityType.Builder.of(HuskEpicFight::new, EasyNPCEntity.CATEGORY)
-                  .sized(0.6F, 1.95F)
-                  .clientTrackingRange(12)
-                  .build(HuskEpicFight.ID));
-
-  public static final RegistryObject<EntityType<SkeletonEpicFight>> SKELETON =
-      ENTITY_TYPES.register(
-          SkeletonEpicFight.ID,
-          () ->
-              EntityType.Builder.of(SkeletonEpicFight::new, EasyNPCEntity.CATEGORY)
-                  .sized(0.6F, 1.99F)
-                  .clientTrackingRange(12)
-                  .build(SkeletonEpicFight.ID));
-
-  public static final RegistryObject<EntityType<WitherSkeletonEpicFight>> WITHER_SKELETON =
-      ENTITY_TYPES.register(
-          WitherSkeletonEpicFight.ID,
-          () ->
-              EntityType.Builder.of(WitherSkeletonEpicFight::new, EasyNPCEntity.CATEGORY)
-                  .sized(0.7F, 2.4F)
-                  .clientTrackingRange(12)
-                  .build(WitherSkeletonEpicFight.ID));
-  public static final RegistryObject<EntityType<ZombieEpicFight>> ZOMBIE =
-      ENTITY_TYPES.register(
-          ZombieEpicFight.ID,
-          () ->
-              EntityType.Builder.of(ZombieEpicFight::new, EasyNPCEntity.CATEGORY)
-                  .sized(0.6F, 1.96F)
-                  .clientTrackingRange(12)
-                  .build(ZombieEpicFight.ID));
+  public static final RegistryObject<EntityType<IllagerEF>> EVOKER =
+      ENTITY_TYPES.register(Illager.ID_EVOKER, () -> ModEntityTypes.EVOKER);
+  public static final RegistryObject<EntityType<HumanoidEF>> HUMANOID =
+      ENTITY_TYPES.register(Humanoid.ID, () -> ModEntityTypes.HUMANOID);
+  public static final RegistryObject<EntityType<HumanoidSlimEF>> HUMANOID_SLIM =
+      ENTITY_TYPES.register(HumanoidSlim.ID, () -> ModEntityTypes.HUMANOID_SLIM);
+  public static final RegistryObject<EntityType<HuskEF>> HUSK =
+      ENTITY_TYPES.register(Zombie.ID_HUSK, () -> ModEntityTypes.HUSK);
+  public static final RegistryObject<EntityType<IllagerEF>> ILLUSIONER =
+      ENTITY_TYPES.register(Illager.ID_ILLUSIONER, () -> ModEntityTypes.ILLUSIONER);
+  public static final RegistryObject<EntityType<IronGolemEF>> IRON_GOLEM =
+      ENTITY_TYPES.register(IronGolem.ID, () -> ModEntityTypes.IRON_GOLEM);
+  public static final RegistryObject<EntityType<SkeletonEF>> SKELETON =
+      ENTITY_TYPES.register(Skeleton.ID, () -> ModEntityTypes.SKELETON);
+  public static final RegistryObject<EntityType<SkeletonEF>> STRAY =
+      ENTITY_TYPES.register(Skeleton.ID_STRAY, () -> ModEntityTypes.STRAY);
+  public static final RegistryObject<EntityType<IllagerEF>> PILLAGER =
+      ENTITY_TYPES.register(Illager.ID_PILLAGER, () -> ModEntityTypes.PILLAGER);
+  public static final RegistryObject<EntityType<IllagerEF>> VINDICATOR =
+      ENTITY_TYPES.register(Illager.ID_VINDICATOR, () -> ModEntityTypes.VINDICATOR);
+  public static final RegistryObject<EntityType<WitherSkeletonEF>> WITHER_SKELETON =
+      ENTITY_TYPES.register(Skeleton.ID_WITHER_SKELETON, () -> ModEntityTypes.WITHER_SKELETON);
+  public static final RegistryObject<EntityType<ZombieEF>> ZOMBIE =
+      ENTITY_TYPES.register(Zombie.ID, () -> ModEntityTypes.ZOMBIE);
+  public static final RegistryObject<EntityType<ZombieVillagerEF>> ZOMBIE_VILLAGER =
+      ENTITY_TYPES.register(ZombieVillager.ID, () -> ModEntityTypes.ZOMBIE_VILLAGER);
 
   protected ModEntityType() {}
 
   @SubscribeEvent
   public static void entityAttributeCreation(EntityAttributeCreationEvent event) {
+    event.put(EVOKER.get(), Evoker.createAttributes().build());
+    event.put(HUMANOID.get(), Humanoid.createAttributes().build());
+    event.put(HUMANOID_SLIM.get(), HumanoidSlim.createAttributes().build());
     event.put(HUSK.get(), Zombie.createAttributes().build());
-    event.put(SKELETON.get(), Zombie.createAttributes().build());
-    event.put(WITHER_SKELETON.get(), Zombie.createAttributes().build());
+    event.put(ILLUSIONER.get(), Illusioner.createAttributes().build());
+    event.put(IRON_GOLEM.get(), IronGolem.createAttributes().build());
+    event.put(SKELETON.get(), Skeleton.createAttributes().build());
+    event.put(STRAY.get(), Skeleton.createAttributes().build());
+    event.put(PILLAGER.get(), Illager.createAttributes().build());
+    event.put(VINDICATOR.get(), Illager.createAttributes().build());
+    event.put(WITHER_SKELETON.get(), Skeleton.createAttributes().build());
     event.put(ZOMBIE.get(), Zombie.createAttributes().build());
+    event.put(ZOMBIE_VILLAGER.get(), ZombieVillager.createAttributes().build());
   }
 }

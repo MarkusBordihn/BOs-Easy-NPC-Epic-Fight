@@ -1,0 +1,62 @@
+{
+  "model": "epicfight:entity/iron_golem",
+  "armature": "epicfight:entity/iron_golem",
+  "renderer": "minecraft:iron_golem",
+  "isHumanoid": false,
+  "faction": "villager",
+  "attributes": {
+    "impact": 0.5,
+    "armor_negation": 0.0,
+    "max_strikes": 1,
+    "chasing_speed": 1.0,
+    "scale": 1.0
+  },
+  "default_livingmotions": {
+    "idle": "epicfight:iron_golem/idle",
+    "walk": "epicfight:iron_golem/walk",
+    "death": "epicfight:iron_golem/death"
+  },
+  "combat_behavior": [
+    {
+      "weapon_categories": ["fist"],
+      "style": "common",
+      "behavior_series": [
+        {
+          "weight": 100.0,
+          "canBeInterrupted": true,
+          "looping": false,
+          "behaviors": [
+            {
+              "conditions": [
+                {"predicate": "within_eye_height"},
+                {"predicate": "within_distance", "min": 0.0, "max": 2.0}
+              ],
+              "animation": "epicfight:iron_golem/attack1"
+            },
+            {
+              "conditions": [
+                {"predicate": "within_eye_height"},
+                {"predicate": "within_distance", "min": 0.0, "max": 2.0}
+              ],
+              "animation": "epicfight:iron_golem/attack2"
+            },
+            {
+              "conditions": [
+                {"predicate": "within_eye_height"},
+                {"predicate": "within_distance", "min": 0.0, "max": 2.0}
+              ],
+              "animation": "epicfight:iron_golem/attack3"
+            },
+            {
+              "conditions": [
+                {"predicate": "within_eye_height"},
+                {"predicate": "within_distance", "min": 0.0, "max": 2.0}
+              ],
+              "animation": "epicfight:iron_golem/attack4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

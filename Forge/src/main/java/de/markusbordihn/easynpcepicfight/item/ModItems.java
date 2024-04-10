@@ -19,12 +19,12 @@
 
 package de.markusbordihn.easynpcepicfight.item;
 
-import de.markusbordihn.easynpc.entity.npc.Zombie;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Humanoid;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Illager;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Skeleton;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Zombie;
 import de.markusbordihn.easynpcepicfight.Constants;
 import de.markusbordihn.easynpcepicfight.entity.ModEntityType;
-import de.markusbordihn.easynpcepicfight.entity.npc.HuskEpicFight;
-import de.markusbordihn.easynpcepicfight.entity.npc.SkeletonEpicFight;
-import de.markusbordihn.easynpcepicfight.entity.npc.WitherSkeletonEpicFight;
 import de.markusbordihn.easynpcepicfight.tabs.EasyNPCEpicFightTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -38,29 +38,81 @@ public class ModItems {
 
   private static final String SPAWN_EGG_PREFIX = "_spawn_egg";
 
+  public static final RegistryObject<Item> EVOKER_NPC_SPAWN_EGG =
+      ITEMS.register(
+          Illager.ID_EVOKER + SPAWN_EGG_PREFIX,
+          () ->
+              new EasyNPCEpicFightSpawnEggItem(
+                  ModEntityType.EVOKER,
+                  new Item.Properties()
+                      .rarity(Rarity.EPIC)
+                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
+  public static final RegistryObject<Item> HUMANOID_NPC_SPAWN_EGG =
+      ITEMS.register(
+          Humanoid.ID + SPAWN_EGG_PREFIX,
+          () ->
+              new EasyNPCEpicFightSpawnEggItem(
+                  ModEntityType.HUMANOID,
+                  new Item.Properties()
+                      .rarity(Rarity.EPIC)
+                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
   public static final RegistryObject<Item> HUSK_NPC_SPAWN_EGG =
       ITEMS.register(
-          HuskEpicFight.ID + SPAWN_EGG_PREFIX,
+          Zombie.ID_HUSK + SPAWN_EGG_PREFIX,
           () ->
               new EasyNPCEpicFightSpawnEggItem(
                   ModEntityType.HUSK,
                   new Item.Properties()
                       .rarity(Rarity.EPIC)
                       .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
-
+  public static final RegistryObject<Item> ILLUSIONER_NPC_SPAWN_EGG =
+      ITEMS.register(
+          Illager.ID_ILLUSIONER + SPAWN_EGG_PREFIX,
+          () ->
+              new EasyNPCEpicFightSpawnEggItem(
+                  ModEntityType.ILLUSIONER,
+                  new Item.Properties()
+                      .rarity(Rarity.EPIC)
+                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
+  public static final RegistryObject<Item> PILLAGER_NPC_SPAWN_EGG =
+      ITEMS.register(
+          Illager.ID_PILLAGER + SPAWN_EGG_PREFIX,
+          () ->
+              new EasyNPCEpicFightSpawnEggItem(
+                  ModEntityType.PILLAGER,
+                  new Item.Properties()
+                      .rarity(Rarity.EPIC)
+                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
   public static final RegistryObject<Item> SKELETON_NPC_SPAWN_EGG =
       ITEMS.register(
-          SkeletonEpicFight.ID + SPAWN_EGG_PREFIX,
+          Skeleton.ID + SPAWN_EGG_PREFIX,
           () ->
               new EasyNPCEpicFightSpawnEggItem(
                   ModEntityType.SKELETON,
                   new Item.Properties()
                       .rarity(Rarity.EPIC)
                       .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
-
+  public static final RegistryObject<Item> STRAY_NPC_SPAWN_EGG =
+      ITEMS.register(
+          Skeleton.ID_STRAY + SPAWN_EGG_PREFIX,
+          () ->
+              new EasyNPCEpicFightSpawnEggItem(
+                  ModEntityType.STRAY,
+                  new Item.Properties()
+                      .rarity(Rarity.EPIC)
+                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
+  public static final RegistryObject<Item> VINDICATOR_NPC_SPAWN_EGG =
+      ITEMS.register(
+          Illager.ID_VINDICATOR + SPAWN_EGG_PREFIX,
+          () ->
+              new EasyNPCEpicFightSpawnEggItem(
+                  ModEntityType.VINDICATOR,
+                  new Item.Properties()
+                      .rarity(Rarity.EPIC)
+                      .tab(EasyNPCEpicFightTab.TAB_SPAWN_EGGS)));
   public static final RegistryObject<Item> WITHER_SKELETON_NPC_SPAWN_EGG =
       ITEMS.register(
-          WitherSkeletonEpicFight.ID + SPAWN_EGG_PREFIX,
+          Skeleton.ID_WITHER_SKELETON + SPAWN_EGG_PREFIX,
           () ->
               new EasyNPCEpicFightSpawnEggItem(
                   ModEntityType.WITHER_SKELETON,

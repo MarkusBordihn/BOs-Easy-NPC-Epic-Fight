@@ -133,9 +133,6 @@ dependencies {
   // The userdev artifact is a special name and will get all sorts of transformations applied to it.
   minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
 
-  // Include Common code
-  compileOnly project(":Common")
-
   // Integration test dependencies
   compileOnly fg.deobf("curse.maven:easy-npc-559312:${project.easy_npc_mod}")
   runtimeOnly fg.deobf("curse.maven:easy-npc-559312:${project.easy_npc_mod}")
@@ -144,14 +141,6 @@ dependencies {
   // Additional helpful Mods for development (runtime dependency)
   runtimeOnly fg.deobf("curse.maven:xaeros_minimap-263420:${project.xaeros_minimap_mod}")
   runtimeOnly fg.deobf("curse.maven:spark-361579:${project.spark_mod}")
-}
-
-tasks.withType(JavaCompile) {
-  source(project(":Common").sourceSets.main.allSource)
-}
-
-processResources {
-  from project(":Common").sourceSets.main.resources
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
@@ -212,6 +201,7 @@ modrinth {
   versionNumber = "${project.version}"
   versionType = "${project.modrinth_release_type}"
   versionName = "${project.mod_name} ${project.version}"
+  changelog = rootProject.file("CHANGELOG.md").text
   uploadFile = jar
   gameVersions = ["${project.minecraft_version}"]
   loaders = ["forge"]

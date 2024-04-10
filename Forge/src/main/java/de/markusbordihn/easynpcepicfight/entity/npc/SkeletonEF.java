@@ -19,17 +19,19 @@
 
 package de.markusbordihn.easynpcepicfight.entity.npc;
 
-import de.markusbordihn.easynpc.entity.EasyNPCEntity;
-import de.markusbordihn.easynpc.entity.npc.Zombie;
+import de.markusbordihn.easynpc.entity.easynpc.npc.Skeleton;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.level.Level;
 
-public class HuskEpicFight extends Zombie {
+public class SkeletonEF extends Skeleton {
 
-  public static final String ID = Zombie.ID_HUSK;
+  public SkeletonEF(EntityType<? extends PathfinderMob> entityType, Level level) {
+    this(entityType, level, Variant.SKELETON);
+  }
 
-  public HuskEpicFight(EntityType<? extends EasyNPCEntity> entityType, Level level) {
-    super(entityType, level, Variant.HUSK);
+  public SkeletonEF(EntityType<? extends PathfinderMob> entityType, Level level, Variant variant) {
+    super(entityType, level, variant);
   }
 
   @Override
@@ -39,6 +41,11 @@ public class HuskEpicFight extends Zombie {
 
   @Override
   public boolean supportsScalingConfiguration() {
+    return false;
+  }
+
+  @Override
+  public boolean supportsSmartAnimations() {
     return false;
   }
 }
