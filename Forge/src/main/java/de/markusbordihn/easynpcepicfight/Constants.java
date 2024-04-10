@@ -17,28 +17,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package de.markusbordihn.easynpcepicfight.tabs;
+package de.markusbordihn.easynpcepicfight;
 
-import de.markusbordihn.easynpcepicfight.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab.DisplayItemsGenerator;
-import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters;
-import net.minecraft.world.item.CreativeModeTab.Output;
+public final class Constants {
 
-public class SpawnEggs implements DisplayItemsGenerator {
+  // General Mod definitions
+  public static final String LOG_NAME = "Easy NPC: Epic Fight";
+  public static final String LOG_ICON = "🗣";
+  public static final String LOG_CREATE_PREFIX = LOG_ICON + " Create Easy NPC: Epic Fight";
+  public static final String LOG_REGISTER_PREFIX = LOG_ICON + " Register Easy NPC: Epic Fight";
+  public static final String MOD_ID = "easy_npc_epic_fight";
+  public static final String MOD_NAME = "Easy NPC - Epic Fight";
+  public static final String MOD_URL =
+      "https://www.curseforge.com/minecraft/mc-mods/easy-npc-epic-fight";
+  // Prefixes
+  public static final String TEXT_PREFIX = "text." + MOD_ID + ".";
+  public static final String TEXT_ITEM_PREFIX = TEXT_PREFIX + "item.";
 
-  protected SpawnEggs() {}
-
-  @Override
-  public void accept(ItemDisplayParameters itemDisplayParameters, Output output) {
-    output.accept(ModItems.EVOKER_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.HUMANOID_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.HUSK_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.ILLUSIONER_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.PILLAGER_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.SKELETON_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.STRAY_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.VINDICATOR_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.WITHER_SKELETON_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.ZOMBIE_NPC_SPAWN_EGG.get());
-  }
+  private Constants() {}
 }

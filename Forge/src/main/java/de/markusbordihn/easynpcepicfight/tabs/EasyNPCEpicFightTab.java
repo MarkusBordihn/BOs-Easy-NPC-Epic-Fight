@@ -42,5 +42,5 @@ public class EasyNPCEpicFightTab {
                   .title(Component.translatable("itemGroup.easy_npc_epic_fight.spawn_eggs"))
                   .build());
 
-  protected EasyNPCEpicFightTab() {}
+  private EasyNPCEpicFightTab() {}
 }

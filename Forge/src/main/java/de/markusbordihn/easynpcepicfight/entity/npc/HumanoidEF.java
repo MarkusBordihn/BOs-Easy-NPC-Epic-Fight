@@ -17,23 +17,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package de.markusbordihn.easynpcepicfight;
+package de.markusbordihn.easynpcepicfight.entity.npc;
 
-public final class Constants {
+import de.markusbordihn.easynpc.entity.easynpc.npc.Humanoid;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.level.Level;
 
-  // General Mod definitions
-  public static final String LOG_NAME = "Easy NPC: Epic Fight";
-  public static final String LOG_ICON = "🗣";
-  public static final String LOG_CREATE_PREFIX = LOG_ICON + " Create Easy NPC: Epic Fight";
-  public static final String LOG_REGISTER_PREFIX = LOG_ICON + " Register Easy NPC: Epic Fight";
-  public static final String MOD_ID = "easy_npc_epic_fight";
-  public static final String MOD_NAME = "Easy NPC - Epic Fight";
-  public static final String MOD_URL =
-      "https://www.curseforge.com/minecraft/mc-mods/easy-npc-epic-fight";
-  // Prefixes
-  public static final String MINECRAFT_PREFIX = "minecraft";
-  public static final String TEXT_PREFIX = "text." + MOD_ID + ".";
-  public static final String TEXT_ITEM_PREFIX = TEXT_PREFIX + "item.";
+public class HumanoidEF extends Humanoid {
 
-  private Constants() {}
+  public HumanoidEF(EntityType<? extends PathfinderMob> entityType, Level level) {
+    super(entityType, level, Variant.STEVE);
+  }
+
+  @Override
+  public boolean supportsPoseConfiguration() {
+    return false;
+  }
+
+  @Override
+  public boolean supportsScalingConfiguration() {
+    return false;
+  }
+
+  @Override
+  public boolean supportsSmartAnimations() {
+    return false;
+  }
 }

@@ -19,7 +19,7 @@
 
 package de.markusbordihn.easynpcepicfight.item;
 
-import de.markusbordihn.easynpc.item.EasyNPCSpawnEggItem;
+import de.markusbordihn.easynpc.item.ModSpawnEggItem;
 import de.markusbordihn.easynpcepicfight.Constants;
 import java.util.List;
 import java.util.function.Supplier;
@@ -33,11 +33,24 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
-public class EasyNPCEpicFightSpawnEggItem extends EasyNPCSpawnEggItem {
+public class EasyNPCEpicFightSpawnEggItem extends ModSpawnEggItem {
 
   public EasyNPCEpicFightSpawnEggItem(
       Supplier<? extends EntityType<? extends Mob>> type, Item.Properties props) {
     super(type, props);
+  }
+
+  @Override
+  public Component getName(ItemStack itemStack) {
+    String descriptionId = this.getDescriptionId(itemStack);
+    return descriptionId.contains("_spawn_egg")
+        ? Component.translatable(
+            "item.easy_npc.spawn_egg",
+            Component.translatable(
+                this.getDescriptionId(itemStack)
+                    .replace("item.easy_npc_epic_fight.", "entity.easy_npc.")
+                    .replace("_spawn_egg", "")))
+        : Component.translatable(this.getDescriptionId(itemStack));
   }
 
   @Override

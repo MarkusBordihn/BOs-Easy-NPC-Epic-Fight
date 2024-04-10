@@ -17,28 +17,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package de.markusbordihn.easynpcepicfight.tabs;
+package de.markusbordihn.easynpcepicfight.entity.npc;
 
-import de.markusbordihn.easynpcepicfight.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab.DisplayItemsGenerator;
-import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters;
-import net.minecraft.world.item.CreativeModeTab.Output;
+import de.markusbordihn.easynpc.entity.easynpc.npc.HumanoidSlim;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.level.Level;
 
-public class SpawnEggs implements DisplayItemsGenerator {
+public class HumanoidSlimEF extends HumanoidSlim {
 
-  protected SpawnEggs() {}
+  public HumanoidSlimEF(EntityType<? extends PathfinderMob> entityType, Level level) {
+    super(entityType, level, Variant.ALEX);
+  }
 
   @Override
-  public void accept(ItemDisplayParameters itemDisplayParameters, Output output) {
-    output.accept(ModItems.EVOKER_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.HUMANOID_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.HUSK_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.ILLUSIONER_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.PILLAGER_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.SKELETON_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.STRAY_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.VINDICATOR_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.WITHER_SKELETON_NPC_SPAWN_EGG.get());
-    output.accept(ModItems.ZOMBIE_NPC_SPAWN_EGG.get());
+  public boolean supportsPoseConfiguration() {
+    return false;
+  }
+
+  @Override
+  public boolean supportsScalingConfiguration() {
+    return false;
+  }
+
+  @Override
+  public boolean supportsSmartAnimations() {
+    return false;
   }
 }

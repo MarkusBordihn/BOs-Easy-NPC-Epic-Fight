@@ -33,10 +33,26 @@ Scaling is also not supported because of the unique model size of the Epic Fight
 
 Most of the other configuration options are supported and can be used with the Epic Fight models.
 
+Further more not all models are supported out of the box.
+
+### Animation and Custom Weapons
+
+Please check the [Epic Fight Mod documentation][epic_fight_wiki] for more information about the
+Epic Fight Mod and how to add custom animations and support for additional weapons over data packs.
+
+This mod is only an integration mod and does not provide a full animation set for the Epic Fight
+mod and custom weapons and use-cases.
+
+You can check the existing example NPC configuration used by this integration mod
+under `/Forge/src/main/resources/data.easy_npc_epic_fight/epicfight_mobpatch/`.
+
 ## Requirements
 
-- [Easy NPC Mod][easy_npc] version 3.7.2 and higher but not version 4.x
-- [Epic Fight Mod][epic_fight] version 20.6.3 or higher
+| Version | [Easy NPC Mod][easy_npc] | [Epic Fight Mod][epic_fight] |
+|---------|--------------------------|------------------------------|
+| 1.0.0   | 1.x                      | 20.5.19                      |
+| 3.0.0   | > 3.7.2 and < 4.x        | 20.5.19                      |
+| 4.0.0   | > 4.3.3 and < 5.x        | 20.7.4                       |
 
 ## Documentation
 
