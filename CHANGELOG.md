@@ -8,6 +8,12 @@ For the full changelog, please go to the [GitHub History][history] instead.
 Note: Please always back up your world / NPCs before updating to a new version!
 Check the [upgrade guide][upgrade_guide] for more information.
 
+### v4.4.0
+
+- Fixed #11: Support for the latest Easy NPC mod version 4.4.x.
+- Fixed #3 and #7: Basic default animations for one-hand and two-hand Epic Fight weapons.
+- Fixed #7: Added better support for Epic Fight weapons.
+
 ### v4.0.0
 
 - Added support for the latest Easy NPC mod version 4.x.
