@@ -41,7 +41,7 @@ Please check the [Epic Fight Mod documentation][epic_fight_wiki] for more inform
 Epic Fight Mod and how to add custom animations and support for additional weapons over data packs.
 
 This mod is only an integration mod and does not provide a full animation set for the Epic Fight
-mod and custom weapons and use-cases.
+mod and custom weapons use-cases.
 
 You can check the existing example NPC configuration used by this integration mod
 under `/Forge/src/main/resources/data.easy_npc_epic_fight/epicfight_mobpatch/`.
@@ -52,7 +52,8 @@ under `/Forge/src/main/resources/data.easy_npc_epic_fight/epicfight_mobpatch/`.
 |---------|--------------------------|------------------------------|
 | 1.0.0   | 1.x                      | 20.5.19                      |
 | 3.0.0   | > 3.7.2 and < 4.x        | 20.5.19                      |
-| 4.0.0   | > 4.3.3 and < 5.x        | 20.7.4                       |
+| 4.0.0   | > 4.3.3 and < 4.4.x      | 20.7.4                       |
+| 4.4.0   | > 4.4.0 and < 5.x        | 20.7.4                       |
 
 ## Documentation
 

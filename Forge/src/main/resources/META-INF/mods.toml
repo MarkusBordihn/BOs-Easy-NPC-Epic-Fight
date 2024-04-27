@@ -44,7 +44,7 @@ side = "BOTH"
 [[dependencies.easy_npc_epic_fight]]
 modId = "easy_npc"
 mandatory = true
-versionRange = "[4.3.3,5.0.0)"
+versionRange = "[4.4.0,5.0.0)"
 ordering = "NONE"
 side = "BOTH"
 
