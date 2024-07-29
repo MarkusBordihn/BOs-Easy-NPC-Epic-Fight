@@ -135,12 +135,13 @@ dependencies {
 
   // Integration test dependencies
   compileOnly fg.deobf("curse.maven:easy-npc-559312:${project.easy_npc_mod}")
-  runtimeOnly fg.deobf("curse.maven:easy-npc-559312:${project.easy_npc_mod}")
-  runtimeOnly fg.deobf("curse.maven:epic_fight-405076:${project.epic_fight_mod}")
+  compileOnly fg.deobf("curse.maven:epic_fight-405076:${project.epic_fight_mod}")
 
   // Additional helpful Mods for development (runtime dependency)
   runtimeOnly fg.deobf("curse.maven:xaeros_minimap-263420:${project.xaeros_minimap_mod}")
   runtimeOnly fg.deobf("curse.maven:spark-361579:${project.spark_mod}")
+
+
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

@@ -19,16 +19,10 @@
 
 package de.markusbordihn.easynpcepicfight.client.renderer;
 
-import de.markusbordihn.easynpc.client.renderer.entity.layers.CustomHumanoidArmorLayer;
-import de.markusbordihn.easynpc.client.renderer.entity.standard.HumanoidModelRenderer;
-import de.markusbordihn.easynpc.client.renderer.entity.standard.HumanoidSlimModelRenderer;
-import de.markusbordihn.easynpc.client.renderer.entity.standard.IllagerModelRenderer;
-import de.markusbordihn.easynpc.client.renderer.entity.standard.IronGolemModelRenderer;
-import de.markusbordihn.easynpc.client.renderer.entity.standard.SkeletonModelRenderer;
-import de.markusbordihn.easynpc.client.renderer.entity.standard.ZombieModelRenderer;
-import de.markusbordihn.easynpc.client.renderer.entity.standard.ZombieVillagerModelRenderer;
+import de.markusbordihn.easynpc.client.renderer.entity.standard.*;
 import de.markusbordihn.easynpcepicfight.Constants;
 import de.markusbordihn.easynpcepicfight.entity.ModEntityType;
+import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -43,36 +37,37 @@ public class ClientRenderer {
   private ClientRenderer() {}
 
   public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+
     log.info("{} Entity Renders ...", Constants.LOG_REGISTER_PREFIX);
 
     event.registerEntityRenderer(ModEntityType.EVOKER.get(), IllagerModelRenderer::new);
     event.registerEntityRenderer(
         ModEntityType.HUMANOID.get(),
-        context -> new HumanoidModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new HumanoidModelRenderer(context, HumanoidArmorLayer.class));
     event.registerEntityRenderer(
         ModEntityType.HUMANOID_SLIM.get(),
-        context -> new HumanoidSlimModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new HumanoidSlimModelRenderer(context, HumanoidArmorLayer.class));
     event.registerEntityRenderer(
         ModEntityType.HUSK.get(),
-        context -> new ZombieModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new ZombieModelRenderer(context, HumanoidArmorLayer.class));
     event.registerEntityRenderer(ModEntityType.ILLUSIONER.get(), IllagerModelRenderer::new);
     event.registerEntityRenderer(ModEntityType.IRON_GOLEM.get(), IronGolemModelRenderer::new);
     event.registerEntityRenderer(
         ModEntityType.SKELETON.get(),
-        context -> new SkeletonModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new SkeletonModelRenderer(context, HumanoidArmorLayer.class));
     event.registerEntityRenderer(
         ModEntityType.STRAY.get(),
-        context -> new SkeletonModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new SkeletonModelRenderer(context, HumanoidArmorLayer.class));
     event.registerEntityRenderer(ModEntityType.PILLAGER.get(), IllagerModelRenderer::new);
     event.registerEntityRenderer(ModEntityType.VINDICATOR.get(), IllagerModelRenderer::new);
     event.registerEntityRenderer(
         ModEntityType.WITHER_SKELETON.get(),
-        context -> new SkeletonModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new SkeletonModelRenderer(context, HumanoidArmorLayer.class));
     event.registerEntityRenderer(
         ModEntityType.ZOMBIE.get(),
-        context -> new ZombieModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new HumanoidModelRenderer(context, HumanoidArmorLayer.class));
     event.registerEntityRenderer(
         ModEntityType.ZOMBIE_VILLAGER.get(),
-        context -> new ZombieVillagerModelRenderer(context, CustomHumanoidArmorLayer.class));
+        context -> new ZombieVillagerModelRenderer(context, HumanoidArmorLayer.class));
   }
 }

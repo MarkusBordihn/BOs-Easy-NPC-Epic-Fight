@@ -3,7 +3,7 @@
   "armature": "epicfight:entity/biped",
   "renderer": "minecraft:zombie",
   "isHumanoid": true,
-  "faction": "neutral",
+  "faction": "villager",
   "attributes": {
     "impact": 0.5,
     "armor_negation": 0.0,

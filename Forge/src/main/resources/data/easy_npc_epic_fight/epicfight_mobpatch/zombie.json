@@ -1,5 +1,5 @@
 {
-  "model": "epicfight:entity/biped_old_texture",
+  "model": "epicfight:entity/biped",
   "armature": "epicfight:entity/biped",
   "renderer": "minecraft:zombie",
   "isHumanoid": true,

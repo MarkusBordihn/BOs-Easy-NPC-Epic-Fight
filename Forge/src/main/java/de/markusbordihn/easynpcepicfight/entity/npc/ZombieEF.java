@@ -19,13 +19,12 @@
 
 package de.markusbordihn.easynpcepicfight.entity.npc;
 
-import de.markusbordihn.easynpc.entity.easynpc.npc.Zombie;
+import de.markusbordihn.easynpcepicfight.entity.npc.SuperModels.Zombie;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.level.Level;
 
 public class ZombieEF extends Zombie {
-
   public ZombieEF(EntityType<? extends PathfinderMob> entityType, Level level) {
     this(entityType, level, Variant.ZOMBIE);
   }

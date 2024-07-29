@@ -94,7 +94,7 @@ public class ModEntityType {
     event.put(PILLAGER.get(), Illager.createAttributes().build());
     event.put(VINDICATOR.get(), Illager.createAttributes().build());
     event.put(WITHER_SKELETON.get(), Skeleton.createAttributes().build());
-    event.put(ZOMBIE.get(), Zombie.createAttributes().build());
+    event.put(ZOMBIE.get(), de.markusbordihn.easynpcepicfight.entity.npc.SuperModels.Zombie.createAttributes().build());
     event.put(ZOMBIE_VILLAGER.get(), ZombieVillager.createAttributes().build());
   }
 }

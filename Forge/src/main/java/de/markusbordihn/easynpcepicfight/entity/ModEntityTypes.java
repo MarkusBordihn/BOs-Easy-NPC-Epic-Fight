@@ -116,7 +116,7 @@ public class ModEntityTypes {
       EntityType.Builder.<ZombieEF>of(ZombieEF::new, CATEGORY)
           .sized(HUMANOID_SIZE_WIDTH, HUMANOID_SIZE_HEIGHT)
           .clientTrackingRange(CLIENT_TRACKING_RANGE)
-          .build(Zombie.ID);
+          .build(ZombieEF.ID);
   public static final EntityType<ZombieVillagerEF> ZOMBIE_VILLAGER =
       EntityType.Builder.of(ZombieVillagerEF::new, CATEGORY)
           .sized(HUMANOID_SIZE_WIDTH, HUMANOID_SIZE_HEIGHT)
