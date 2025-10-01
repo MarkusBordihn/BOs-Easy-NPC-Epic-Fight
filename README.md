@@ -3,6 +3,15 @@
 [![Easy NPC - Epic Fight Downloads](http://cf.way2muchnoise.eu/full_957625_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/easy-npc-epic-fight)
 [![Easy NPC - Epic Fight Versions](http://cf.way2muchnoise.eu/versions/Minecraft_957625_all.svg)](https://www.curseforge.com/minecraft/mc-mods/easy-npc-epic-fight)
 
+## ⚠️ This repository has been archived and is no longer actively maintained.  
+
+In recent versions of the [Easy NPC][easy_npc] mod, the [Epic Fight][epic_fight] functionality is already included, but not enabled by default.  
+This means No additional external mod is required.
+
+The feature is currently being tested and will be enabled by default in the upcoming alpha release within the next few days (after successful testing).
+
+---
+
 This mod adds integration for [Easy NPC][easy_npc] and the [Epic Fight][epic_fight] mods.
 
 Unlock a new dimension of interaction within your Minecraft world by combining the user-friendly
